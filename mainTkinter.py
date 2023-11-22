@@ -13,7 +13,10 @@ class MainTkinterClass:
         self.root = Tk()
         self.image_tabs = Notebook(self.root)  # нотбук для вкладок картинок
         self.opened_images = [] # массив для хранения открытых вкладок
-        self.root.iconbitmap('resources/logoPK.ico')
+        try:
+            self.root.iconbitmap('resources/logoPK.ico')
+        except:
+            pass
         self.mainFont = font.Font(size=15)
         self.root.configure(background="#DEB887")
         self.lbl = Label(text="Чтение текста с фото", font=self.mainFont, background="#DEB887")
